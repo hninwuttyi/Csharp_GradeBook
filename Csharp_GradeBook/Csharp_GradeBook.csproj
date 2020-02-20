@@ -46,7 +46,6 @@
     <Compile Include="..\..\Csharp_GradeBook_Pre\Program.cs">
       <Link>Program.cs</Link>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
