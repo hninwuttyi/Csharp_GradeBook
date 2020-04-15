@@ -10,17 +10,11 @@ namespace Csharp_GradeBook
     {
         static void Main(string[] args)
         {
-            var numbers = new double[3];
-            numbers[0] = 12.7;
-
-            if(args.Length > 0)
-            {
-                Console.WriteLine($"Hello, {args[0]}!");
-            }
-            else
-            {
-                Console.WriteLine("Hello!");
-            }
+            var book = new Book("Scott's grade book");
+            book.AddGrade(89.1);
+            book.AddGrade(90.5);
+            book.AddGrade(77.5);
+            book.ShowStatics();          
         }
     }
 }
