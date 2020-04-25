@@ -11,7 +11,7 @@ namespace GradeBook_Test
     public class BookTests
     {
         [Fact]
-        public void Test1()
+        public void BookCalculateAndAverageGrade()
         {
             //arrange
             var book = new Book("");
