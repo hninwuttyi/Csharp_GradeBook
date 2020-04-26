@@ -10,6 +10,7 @@ namespace Csharp_GradeBook
     {
         public Book(string name)
         {
+            categories = "";
             grades = new List<double>();
             Name = name;
 
@@ -90,7 +91,7 @@ namespace Csharp_GradeBook
                 default:
                     result.letter = 'F';
                     break;
-
+ 
             }
             return result;
         }
@@ -101,5 +102,7 @@ namespace Csharp_GradeBook
             get;
             private set;
         }
+
+        readonly string categories = "Science";
     }
 }
