@@ -10,7 +10,6 @@ namespace Csharp_GradeBook
     {
         public Book(string name)
         {
-            categories = "";
             grades = new List<double>();
             Name = name;
 
@@ -103,6 +102,6 @@ namespace Csharp_GradeBook
             private set;
         }
 
-        readonly string categories = "Science";
+        public const string categories = "Science";
     }
 }

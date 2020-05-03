@@ -41,6 +41,7 @@ namespace Csharp_GradeBook
 
 
             var stats = book.GetStatistics();
+            Console.WriteLine(Book.categories);
             Console.WriteLine($"For the book name {book.Name}");
             Console.WriteLine($"The lowest grade is {stats.Low}");
             Console.WriteLine($"The highest grade is {stats.High}");
