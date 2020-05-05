@@ -11,8 +11,12 @@ namespace Csharp_GradeBook
         static void Main(string[] args)
         {
             var book = new Book("Scott's grade book");
+            book.GradeAdded += OnGradedAdded;
+            book.GradeAdded += OnGradedAdded;
+            book.GradeAdded -= OnGradedAdded;
+            book.GradeAdded += OnGradedAdded;
 
-            while(true)
+            while (true)
             {
                 Console.WriteLine("Enter a grade or 'q' to quit");
                 var input = Console.ReadLine();
@@ -38,7 +42,7 @@ namespace Csharp_GradeBook
                     Console.WriteLine("**");
                 }
             }
-
+             
 
             var stats = book.GetStatistics();
             Console.WriteLine(Book.categories);
@@ -47,6 +51,11 @@ namespace Csharp_GradeBook
             Console.WriteLine($"The highest grade is {stats.High}");
             Console.WriteLine($"The average grade is {stats.Average:N1}");
             Console.WriteLine($"The letter grade is {stats.letter}");
+        }
+
+        public static void OnGradedAdded(object sender, EventArgs e)
+        {
+            Console.WriteLine("A grade is added.");
         }
     }
 }
