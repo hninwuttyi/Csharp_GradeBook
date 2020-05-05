@@ -8,8 +8,32 @@ using Xunit;
 
 namespace GradeBook_Test
 {
+    public delegate int WriteLogDelegate(int logValue);
+
     public class TypeTests
     {
+        int count = 0;
+        [Fact]
+        public void WriteLogDelegateCanPoingToMethod()
+        {
+            WriteLogDelegate log = returnValue;
+            log += returnValue;
+            log += increasementCount;
+            var result = log(5);
+            Assert.Equal(3, count);
+
+        }
+        int increasementCount(int value)
+        {
+            count++;
+            return value;
+        }
+        int returnValue(int value)
+        {
+            count++;
+            return value;
+        }
+
         [Fact]
         public void StringBehaveLikeValueTypes()
         {

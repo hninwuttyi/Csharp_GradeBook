@@ -99,7 +99,7 @@ namespace Csharp_GradeBook
         public string Name
         {
             get;
-            private set;
+            set;
         }
 
         public const string categories = "Science";
