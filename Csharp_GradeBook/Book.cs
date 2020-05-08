@@ -7,7 +7,16 @@ using System.Threading.Tasks;
 namespace Csharp_GradeBook
 {
     public delegate void GradeAddedDelegate(object sender, EventArgs args);
-    public class Book
+
+    public  class NameObject
+    {
+        public string Name
+        {
+            get;
+            set;
+        }
+    }
+    public class Book : NameObject
     {
         public Book(string name)
         {
@@ -103,11 +112,6 @@ namespace Csharp_GradeBook
         }
 
         private List<double> grades;
-        public string Name
-        {
-            get;
-            set;
-        }
 
         public const string categories = "Science";
     }
